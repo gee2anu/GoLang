@@ -1,0 +1,55 @@
+Stepping into Go from C - Part 1 
+
+Start of a long journeySimilarities :
+
+Comments are same in C and Go.
+Both C and Go have the concept of structures.
+Both C and Go have pointers.
+Format specifiers are largely same between C and Go.
+
+
+Differences : 
+We add semi-colon to denote end of a statement in C. Semi colon is not to be added at the end of each line in Go. 
+
+Variable declaration : 
+In C : We declare the variable after mentioning the data type.
+  Example : int x;
+In Go : We name the variable and then specify its data type.
+  Example : var x int
+In Go : We also have short hand declarations wherein the data type is inferred based on the value.
+  Example : x:= 4
+This statement creates an variable named 'x' of integer type and initialises it to 4.
+In C : We have to explicitly initialise a variable declared, unless it is static.
+  Example : int x = 0;
+In Go: Variables are initialised to the zero value of the particular data type automatically.
+
+Extern Access : 
+In C : We add header files containing references to other files and projects.
+  Example : #include <math.h>
+In Go : We have packages which are to be imported.
+  Example : import "math"
+In Go we can group all our imports together. This is considered to be good practice.
+  Example :
+  import (
+  "fmt"
+  "math"
+  )
+Basic Formats : 
+In C : We have printf and scanf for reading and writing.
+In Go : We have Print, Println , Print, Scan, Scanf and bufio and other packages for reading and writing.
+
+Loops : 
+In C : We have for, while and do while loops.
+In Go : We have for loop - which can be used as all three, as well as an iterator over arrays/slices etc.
+
+Arrays : 
+In C : We have arrays.
+In Go : We have arrays and slices. Size of a slice can be dynamically increased.
+
+Pointers:
+In C : We have to use "->" in order to dereference a field using a pointer .
+In Go : It is done automatically for us, and we can reference using "." Dot operator.
+
+Conditional Statements : 
+In C : We have to explicitly "break" after each case statement in switch case - to avoid fall through.
+In Go : After each case statement we need not give "break", instead fall through is avoided automatically.
